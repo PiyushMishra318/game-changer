@@ -70,7 +70,6 @@
 				onlyUnique
 				splitWith=","
 				placeholder="Search a game genre"
-				autoCompleteFilter={false}
 				onlyAutocomplete
 			/>
 			<div class="absolute right-0 p-2 top-0 h-full flex justify-center items-center">
