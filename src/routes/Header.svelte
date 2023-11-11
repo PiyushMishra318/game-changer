@@ -1,38 +1,24 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
+	import logo from '$lib/images/game-changer.png';
 	import github from '$lib/images/github.svg';
+	const githubURL = process.env.VITE_REPO_URL;
+
+	const appURL =
+		process.env.VITE_ENV === 'DEV' ? process.env.VITE_APP_DEV_URL : process.env.VITE_APP_PROD_URL;
 </script>
 
-<header>
+<header class="shadow-lg rounded-b-lg sticky top-0 flex justify-between items-center">
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a href={appURL}>
+			<img src={logo} class="rounded-full" alt="GameChanger" />
 		</a>
 	</div>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
+	<div class="uppercase text-xl text-white font-semibold">Game Changer</div>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a href={githubURL}>
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>
@@ -40,8 +26,7 @@
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
+		background: rgb(113 113 113 / 85%);
 	}
 
 	.corner {
@@ -79,7 +64,7 @@
 		fill: var(--background);
 	}
 
-	ul {
+	div {
 		position: relative;
 		padding: 0;
 		margin: 0;

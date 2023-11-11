@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte';
 	import './styles.css';
+	import '../app.css';
 </script>
 
 <div class="app">
@@ -11,7 +12,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>FOOTER</p>
 	</footer>
 </div>
 
@@ -20,6 +21,8 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		background-size: contain;
+		background-image: url('/src/lib/images/app-bg.jpg');
 	}
 
 	main {
