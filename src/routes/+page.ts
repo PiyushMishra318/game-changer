@@ -3,3 +3,17 @@
 export const prerender = true;
 export type Tag = { label: string; value: string };
 export type Tags = Tag[];
+export type Game = {
+  releaseDate: Date;
+  name: string;
+  thumbnail: string;
+  userScore: number;
+  metaScore: number;
+  platforms: string[];
+  genres: string[];
+  description: string;
+  videos: string[];
+  developer: string;
+  publisher: string;
+  rating: string;
+}
