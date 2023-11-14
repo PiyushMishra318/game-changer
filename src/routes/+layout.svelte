@@ -1,26 +1,22 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+	import Header from '$lib/Header.svelte';
 	import '../app.css';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
 <div class="app">
 	<Header />
-
 	<main>
 		<slot />
 	</main>
-
-	<footer>
-		<p>FOOTER</p>
-	</footer>
+	<Footer />
 </div>
 
 <style>
 	.app {
 		display: flex;
 		font-family: monospace;
-    flex-direction: column;
+		flex-direction: column;
 		min-height: 100vh;
 		background-size: contain;
 		background-image: url('/src/lib/images/app-bg.jpg');
@@ -35,23 +31,5 @@
 		max-width: 80rem;
 		margin: 0 auto;
 		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>
